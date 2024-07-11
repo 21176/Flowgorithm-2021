@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Senthil"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-12-06 12:26:55 PM"/>
+        <attribute name="created" value="U2VudGhpbDtERVNLVE9QLThLNUE0RE87MjAyMS0xMS0xOTswOTo0MjozOSBBTTszMDMx"/>
+        <attribute name="edited" value="U2VudGhpbDtERVNLVE9QLThLNUE0RE87MjAyMS0xMS0xOTsxMDowMTowNyBBTTs2OzMxMjY="/>
+        <attribute name="edited" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjEtMTItMDY7MTI6MjY6NTUgUE07MjsyOTUz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i, fact" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter a number&quot;" newline="True"/>
+            <input variable="n"/>
+            <assign variable="fact" expression="1"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <assign variable="fact" expression="fact*i"/>
+            </for>
+            <output expression="&quot;the factorial of the number is: &quot; &amp;fact" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

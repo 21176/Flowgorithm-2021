@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="navin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-12-02 03:34:08 PM"/>
+        <attribute name="created" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjEtMTItMDE7MTI6MDQ6MjAgUE07MjgyNw=="/>
+        <attribute name="edited" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjEtMTItMDI7MDM6MzQ6MDggUE07MzsyOTQ3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, result" type="Integer" array="False" size=""/>
+            <declare name="operator" type="String" array="False" size=""/>
+            <output expression="&quot;enter the numbers: &quot;" newline="True"/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <do expression="operator!=&quot;c&quot;">
+                <output expression="&quot;select an operator(press 'c' to exit): &quot;" newline="True"/>
+                <input variable="operator"/>
+                <assign variable="result" expression="0"/>
+                <if expression="operator==&quot;+&quot;">
+                    <then>
+                        <assign variable="result" expression="a+b"/>
+                        <output expression="&quot;the sum is: &quot;&amp;result" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="result" expression="0"/>
+                <if expression="operator==&quot;-&quot;">
+                    <then>
+                        <assign variable="result" expression="a-b"/>
+                        <output expression="&quot;the sub is: &quot;&amp;result" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="result" expression="1"/>
+                <if expression="operator==&quot;*&quot;">
+                    <then>
+                        <assign variable="result" expression="a*b"/>
+                        <output expression="&quot;the product is: &quot;&amp;result" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="result" expression="1"/>
+                <if expression="operator==&quot;/&quot;">
+                    <then>
+                        <assign variable="result" expression="a/b"/>
+                        <output expression="&quot;the division is: &quot;&amp;result" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </do>
+        </body>
+    </function>
+</flowgorithm>

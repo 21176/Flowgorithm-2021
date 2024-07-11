@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="navin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-04-19 10:02:36 AM"/>
+        <attribute name="created" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjItMDEtMTI7MTI6NDQ6MjYgUE07MjgzOA=="/>
+        <attribute name="edited" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjItMDQtMTk7MTA6MDI6MzYgQU07NDsyOTM3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, j, N, t" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the size of the array: &quot;" newline="True"/>
+            <input variable="N"/>
+            <declare name="num" type="Integer" array="True" size="N"/>
+            <output expression="&quot;Enter the elements of the array: &quot;" newline="True"/>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <input variable="num[i]"/>
+            </for>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <for variable="j" start="0" end="(N-1)-i-1" direction="inc" step="1">
+                    <if expression="num[j]&gt;num[j+1]">
+                        <then>
+                            <assign variable="t" expression="num[j]"/>
+                            <assign variable="num[j]" expression="num[j+1]"/>
+                            <assign variable="num[j+1]" expression="t"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <output expression="&quot;The array after bubble sort: &quot;" newline="True"/>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <output expression="num[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

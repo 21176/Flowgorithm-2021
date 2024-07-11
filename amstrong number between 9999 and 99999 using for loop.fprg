@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="navin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-12-25 09:04:40 AM"/>
+        <attribute name="created" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjEtMTItMjQ7MTA6Mzg6MDMgQU07MjgyMw=="/>
+        <attribute name="edited" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjEtMTItMjQ7MTA6Mzg6MDYgQU07MTtuYXZpbjtERVNLVE9QLTM4QzZGQk47MjAyMS0xMi0yMTswODoyNTo0NSBQTTt0ZXN0LmZwcmc7NjgyMQ=="/>
+        <attribute name="edited" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjEtMTItMjU7MDk6MDQ6NDAgQU07NTsyOTM4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, a, sum, num1, b, c" type="Integer" array="False" size=""/>
+            <for variable="a" start="9999" end="99999" direction="inc" step="1">
+                <assign variable="num" expression="0"/>
+                <assign variable="b" expression="a"/>
+                <assign variable="c" expression="a"/>
+                <while expression="c!=0">
+                    <assign variable="c" expression="c/10"/>
+                    <assign variable="num" expression="num+1"/>
+                </while>
+                <assign variable="num1" expression="0"/>
+                <assign variable="sum" expression="0"/>
+                <while expression="b!=0">
+                    <assign variable="num1" expression="b%10"/>
+                    <assign variable="b" expression="b/10"/>
+                    <assign variable="sum" expression="sum+(num1 ^ num)"/>
+                </while>
+                <if expression="sum==a">
+                    <then>
+                        <output expression="&quot;it is an amstrong number!!&quot;&amp;a" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

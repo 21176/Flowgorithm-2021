@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Senthil"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-19 10:22:50 AM"/>
+        <attribute name="created" value="U2VudGhpbDtERVNLVE9QLThLNUE0RE87MjAyMS0xMS0xOTsxMDoxNTozMyBBTTszMDE3"/>
+        <attribute name="edited" value="U2VudGhpbDtERVNLVE9QLThLNUE0RE87MjAyMS0xMS0xOTsxMDoyMjo1MCBBTTszOzMxMjQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i, sum" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter a number: &quot;" newline="True"/>
+            <input variable="n"/>
+            <assign variable="sum" expression="0"/>
+            <for variable="i" start="1" end="n-1" direction="inc" step="1">
+                <if expression="n%i==0">
+                    <then>
+                        <output expression="i" newline="True"/>
+                        <assign variable="sum" expression="sum+i"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="sum==n">
+                <then>
+                    <output expression="&quot;it is a perfect number&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;it is not a perfect number&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

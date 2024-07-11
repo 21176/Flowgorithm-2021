@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="navin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-07 10:05:56 AM"/>
+        <attribute name="created" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjItMDEtMDc7MTA6MDI6MjkgQU07MjgyMg=="/>
+        <attribute name="edited" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjItMDEtMDc7MTA6MDU6NTYgQU07MTsyOTMz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, N" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the size of the array: &quot;" newline="True"/>
+            <input variable="N"/>
+            <declare name="num" type="Integer" array="True" size="N"/>
+            <output expression="&quot;Enter the elements of the array: &quot;" newline="True"/>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <input variable="num[i]"/>
+                <if expression="num[i]%2==0">
+                    <then/>
+                    <else>
+                        <output expression="&quot;The number is an odd number: &quot;&amp;num[i]" newline="True"/>
+                    </else>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

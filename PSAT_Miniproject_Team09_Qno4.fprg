@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="navin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-30 12:25:44 PM"/>
+        <attribute name="created" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjItMDEtMjE7MDc6MDE6MTggUE07MjgzNg=="/>
+        <attribute name="edited" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjItMDEtMzA7MTI6MjU6NDQgUE07MzsyOTQ3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="t1, t2, t3, swim, bicycle, jog, c1, c2, c3, ct, tp" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter the time you bicycled (in hours): &quot;" newline="True"/>
+            <input variable="t1"/>
+            <output expression="&quot;Enter the time you jogged (in hours): &quot;" newline="True"/>
+            <input variable="t2"/>
+            <output expression="&quot;Enter the time you swimmed (in hours): &quot;" newline="True"/>
+            <input variable="t3"/>
+            <assign variable="bicycle" expression="200"/>
+            <assign variable="jog" expression="475"/>
+            <assign variable="swim" expression="275"/>
+            <assign variable="c1" expression="bicycle*t1"/>
+            <assign variable="c2" expression="jog*t2"/>
+            <assign variable="c3" expression="swim*t3"/>
+            <assign variable="ct" expression="c1+c2+c3"/>
+            <assign variable="tp" expression="ct/3500"/>
+            <output expression="&quot;The total number of pounds worked off by you: &quot;&amp;tp&amp; &quot; pounds.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

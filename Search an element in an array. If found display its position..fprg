@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="navin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-07 10:12:17 AM"/>
+        <attribute name="created" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjItMDEtMDc7MDk6NDk6NDggQU07Mjg0Mg=="/>
+        <attribute name="edited" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjItMDEtMDc7MTA6MTE6MjggQU07MTt2aWR1bDtERVNLVE9QLVA5SVI1Qzk7MjAyMi0wMS0wNjsxMDo1NDoyMyBBTTtTZWFyY2ggYW4gZWxlbWVudCBpbiBhbiBhcnJheS4gSWYgZm91bmQgZGlzcGxheSBpdHMgcG9zaXRpb24uLmZwcmc7MTIwMDM="/>
+        <attribute name="edited" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjItMDEtMDc7MTA6MTI6MTcgQU07MzsyOTMw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, N, ele" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the size of the array: &quot;" newline="True"/>
+            <input variable="N"/>
+            <declare name="a" type="Integer" array="True" size="N"/>
+            <output expression="&quot;Enter the elements of the array: &quot;" newline="True"/>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <input variable="a[i]"/>
+            </for>
+            <output expression="&quot;Enter the search element: &quot;" newline="True"/>
+            <input variable="ele"/>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <if expression="a[i]=ele">
+                    <then>
+                        <output expression="&quot;Found element at position:&quot; &amp;i" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

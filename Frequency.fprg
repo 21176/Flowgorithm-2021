@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="navin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-19 12:21:35 PM"/>
+        <attribute name="created" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjItMDEtMTk7MTI6MTA6MTMgUE07MjgzNA=="/>
+        <attribute name="edited" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjItMDEtMTk7MTI6MjE6MzUgUE07MTsyOTQ4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, N, freq, temp, j" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the size of the array: &quot;" newline="True"/>
+            <input variable="N"/>
+            <declare name="num" type="Integer" array="True" size="N"/>
+            <output expression="&quot;Enter the elements into the array: &quot;" newline="True"/>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <input variable="num[i]"/>
+            </for>
+            <output expression="&quot;The array after sorting is: &quot;" newline="True"/>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <for variable="j" start="i+1" end="N-1" direction="inc" step="1">
+                    <if expression="num[i]&gt;num[j]">
+                        <then>
+                            <assign variable="temp" expression="num[i]"/>
+                            <assign variable="num[i]" expression="num[j]"/>
+                            <assign variable="num[j]" expression="temp"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <output expression="num[i]" newline="True"/>
+            </for>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <assign variable="freq" expression="1"/>
+                <for variable="j" start="i+1" end="N-1" direction="inc" step="1">
+                    <if expression="num[i]=num[j]">
+                        <then>
+                            <assign variable="freq" expression="freq+1"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <if expression="freq=0">
+                    <then/>
+                    <else>
+                        <output expression="&quot;The frequency of &quot; &amp;num[i]&amp; &quot; is: &quot;&amp;freq" newline="True"/>
+                    </else>
+                </if>
+                <assign variable="i" expression="i+freq-1"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

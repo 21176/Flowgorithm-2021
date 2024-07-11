@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="navin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-21 09:08:16 AM"/>
+        <attribute name="created" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjItMDEtMjE7MDg6NTQ6MjYgQU07MjgyOQ=="/>
+        <attribute name="edited" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjItMDEtMjE7MDk6MDg6MTYgQU07MjsyOTM3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter a number: &quot;" newline="True"/>
+            <input variable="a"/>
+            <call expression="armstrong(a)"/>
+        </body>
+    </function>
+    <function name="armstrong" type="None" variable="">
+        <parameters>
+            <parameter name="a" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="num, sum, num1, b, c" type="Integer" array="False" size=""/>
+            <assign variable="num" expression="0"/>
+            <assign variable="b" expression="a"/>
+            <assign variable="c" expression="a"/>
+            <while expression="c!=0">
+                <assign variable="c" expression="c/10"/>
+                <assign variable="num" expression="num+1"/>
+            </while>
+            <assign variable="num1" expression="0"/>
+            <assign variable="sum" expression="0"/>
+            <while expression="b!=0">
+                <assign variable="num1" expression="b%10"/>
+                <assign variable="b" expression="b/10"/>
+                <assign variable="sum" expression="sum+(num1 ^ num)"/>
+            </while>
+            <if expression="sum==a">
+                <then>
+                    <output expression="&quot;It is an armstrong number&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;It is not an armstrong number&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

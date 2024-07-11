@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="navin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-12-20 12:32:29 PM"/>
+        <attribute name="created" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjEtMTItMjA7MTI6Mjc6MjIgUE07MjgzNQ=="/>
+        <attribute name="edited" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjEtMTItMjA7MTI6MzI6MjkgUE07MTsyOTQ2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, j, a, b, fac" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter the numbers: &quot;" newline="True"/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <for variable="i" start="a" end="b" direction="inc" step="1">
+                <assign variable="fac" expression="1"/>
+                <for variable="j" start="1" end="i" direction="inc" step="1">
+                    <assign variable="fac" expression="fac*j"/>
+                </for>
+                <output expression="fac" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

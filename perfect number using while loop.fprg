@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="navin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-21 03:04:55 PM"/>
+        <attribute name="created" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjEtMTEtMjE7MDI6NTg6NDIgUE07Mjg0MA=="/>
+        <attribute name="edited" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjEtMTEtMjE7MDM6MDQ6NTUgUE07MTsyOTQ0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, n, fac, sum" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter a number: &quot;" newline="True"/>
+            <input variable="n"/>
+            <assign variable="fac" expression="1"/>
+            <assign variable="sum" expression="0"/>
+            <assign variable="i" expression="1"/>
+            <while expression="i&lt;=n-1">
+                <if expression="n%i==0">
+                    <then>
+                        <output expression="i" newline="True"/>
+                        <assign variable="sum" expression="sum+i"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="i" expression="i+1"/>
+            </while>
+            <if expression="sum==n">
+                <then>
+                    <output expression="&quot;the given number is perfect&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;the given number is not perfect&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

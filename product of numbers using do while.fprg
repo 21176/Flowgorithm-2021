@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="navin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-12-24 09:25:01 AM"/>
+        <attribute name="created" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjEtMTItMjQ7MDk6MTA6NDggQU07MjgzMA=="/>
+        <attribute name="edited" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjEtMTItMjQ7MDk6MjU6MDEgQU07MTsyOTMz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, multiply" type="Integer" array="False" size=""/>
+            <assign variable="multiply" expression="1"/>
+            <output expression="&quot;enter a number: &quot;" newline="True"/>
+            <input variable="num"/>
+            <do expression="num&gt;0">
+                <assign variable="multiply" expression="num*multiply"/>
+                <output expression="&quot;the answer is: &quot;&amp;multiply" newline="True"/>
+                <output expression="&quot;enter a number: &quot;" newline="True"/>
+                <input variable="num"/>
+            </do>
+            <output expression="&quot;final product is: &quot;&amp;multiply" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

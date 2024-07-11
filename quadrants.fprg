@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Senthil"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-13 11:07:19 AM"/>
+        <attribute name="created" value="U2VudGhpbDtERVNLVE9QLThLNUE0RE87MjAyMS0xMS0xMzsxMTowMjoyMyBBTTszMDA3"/>
+        <attribute name="edited" value="U2VudGhpbDtERVNLVE9QLThLNUE0RE87MjAyMS0xMS0xMzsxMTowNzoxOSBBTTsxOzMxMjU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x" type="Real" array="False" size=""/>
+            <declare name="y" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter the x axis: &quot;" newline="True"/>
+            <input variable="x"/>
+            <output expression="&quot;Enter the y axis: &quot;" newline="True"/>
+            <input variable="y"/>
+            <if expression="x&gt;0&amp;&amp;y&gt;0">
+                <then>
+                    <output expression="&quot;first quadrant&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="x&lt;00&amp;&amp;y&gt;0">
+                        <then>
+                            <output expression="&quot;second quadrant&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="x&lt;0&amp;&amp;y&lt;0">
+                                <then>
+                                    <output expression="&quot;third quadrant&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;fourth quadrant&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

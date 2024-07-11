@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Senthil"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-29 10:46:53 PM"/>
+        <attribute name="created" value="U2VudGhpbDtERVNLVE9QLThLNUE0RE87MjAyMS0xMC0yOTswOTo1OTo1MiBBTTszMDM0"/>
+        <attribute name="edited" value="U2VudGhpbDtERVNLVE9QLThLNUE0RE87MjAyMS0xMC0yOTsxMDo0Njo1MyBQTTs0OzMxNDk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num1" type="Real" array="False" size=""/>
+            <declare name="num2" type="Real" array="False" size=""/>
+            <declare name="num3" type="Real" array="False" size=""/>
+            <output expression="&quot;enter the first number&quot;" newline="True"/>
+            <input variable="num1"/>
+            <output expression="&quot;enter the second number&quot;" newline="True"/>
+            <input variable="num2"/>
+            <output expression="&quot;enter the third number&quot;" newline="True"/>
+            <input variable="num3"/>
+            <if expression="num1&gt;num2&amp;&amp;num1&gt;num3">
+                <then>
+                    <output expression="&quot;first number is the greatest &quot; &amp;num1" newline="True"/>
+                </then>
+                <else>
+                    <if expression="num2&gt;num3">
+                        <then>
+                            <output expression="&quot;second number is the greatest &quot; &amp;num2" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;third number is the greatest &quot; &amp;num3" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

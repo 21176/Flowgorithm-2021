@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="navin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-12-23 12:54:10 PM"/>
+        <attribute name="created" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjEtMTItMjM7MTI6MTg6NDcgUE07Mjg0NQ=="/>
+        <attribute name="edited" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjEtMTItMjM7MTI6NTQ6MTAgUE07MjsyOTQ0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, current, next, previous, count" type="Real" array="False" size=""/>
+            <output expression="&quot;enter a number: &quot;" newline="True"/>
+            <input variable="num"/>
+            <output expression="&quot;the fibonacci series is: &quot;" newline="False"/>
+            <if expression="num==0">
+                <then/>
+                <else>
+                    <if expression="num==1">
+                        <then>
+                            <output expression="&quot;0&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <assign variable="previous" expression="0"/>
+                            <assign variable="current" expression="1"/>
+                            <output expression="previous" newline="False"/>
+                            <output expression="&quot;, &quot;" newline="False"/>
+                            <output expression="current" newline="False"/>
+                            <output expression="&quot;, &quot;" newline="False"/>
+                            <assign variable="count" expression="2"/>
+                            <while expression="count!=num">
+                                <assign variable="next" expression="current+previous"/>
+                                <assign variable="count" expression="count+1"/>
+                                <assign variable="previous" expression="current"/>
+                                <assign variable="current" expression="next"/>
+                                <output expression="current" newline="False"/>
+                                <output expression="&quot;, &quot;" newline="False"/>
+                            </while>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="navin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-20 06:45:12 PM"/>
+        <attribute name="created" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjItMDEtMjA7MDY6MjQ6MTMgUE07MjgzNA=="/>
+        <attribute name="edited" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjItMDEtMjA7MDY6NDU6MTIgUE07MTsyOTQ0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, N, count, ele" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the size of the array: &quot;" newline="True"/>
+            <input variable="N"/>
+            <declare name="a" type="Integer" array="True" size="N"/>
+            <output expression="&quot;Enter the elements into the array: &quot;" newline="True"/>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <input variable="a[i]"/>
+            </for>
+            <output expression="&quot;Enter the element to be inserted: &quot;" newline="True"/>
+            <input variable="ele"/>
+            <for variable="i" start="N" end="N+1" direction="inc" step="1">
+                <assign variable="a[i]" expression="ele"/>
+                <output expression="a[i]" newline="True"/>
+            </for>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <output expression="a[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

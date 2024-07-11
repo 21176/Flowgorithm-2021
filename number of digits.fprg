@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="navin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-26 10:19:53 AM"/>
+        <attribute name="created" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjEtMTEtMjQ7MTI6NTI6MTggUE07Mjg0MQ=="/>
+        <attribute name="edited" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjEtMTEtMjY7MTA6MTk6NTMgQU07MTA7Mjk4NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, a" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter a number&quot;" newline="True"/>
+            <input variable="a"/>
+            <assign variable="num" expression="0"/>
+            <while expression="a!=0">
+                <assign variable="a" expression="a/10"/>
+                <assign variable="num" expression="num+1"/>
+            </while>
+            <output expression="&quot;the number of digits is: &quot;&amp;num" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

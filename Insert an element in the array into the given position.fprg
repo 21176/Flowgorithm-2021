@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="navin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-30 12:01:57 PM"/>
+        <attribute name="created" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjItMDEtMzA7MTE6NTE6MzEgQU07MjgxNg=="/>
+        <attribute name="edited" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjItMDEtMzA7MTE6NTE6MzUgQU07MTtuYXZpbjtERVNLVE9QLTM4QzZGQk47MjAyMi0wMS0yMDswOTo1NDowMiBQTTtpbnNlcnQgZWxlbWVudCBpbnRvIGFuIGFycmF5IDIuZnByZzs5MTcw"/>
+        <attribute name="edited" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjItMDEtMzA7MTI6MDE6NTcgUE07MTsyOTQz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, N, pos, ele" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the size of the array: &quot;" newline="True"/>
+            <input variable="N"/>
+            <declare name="a" type="Integer" array="True" size="N+1"/>
+            <output expression="&quot;Enter the elements into the array: &quot;" newline="True"/>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <input variable="a[i]"/>
+            </for>
+            <output expression="&quot;Enter the position: &quot;" newline="True"/>
+            <input variable="pos"/>
+            <output expression="&quot;Enter the element: &quot;" newline="True"/>
+            <input variable="ele"/>
+            <for variable="i" start="N-1" end="pos-1" direction="dec" step="1">
+                <assign variable="a[i+1]" expression="a[i]"/>
+            </for>
+            <assign variable="a[pos-1]" expression="ele"/>
+            <output expression="&quot;The elements in the array after inserting: &quot;" newline="True"/>
+            <for variable="i" start="0" end="N" direction="inc" step="1">
+                <output expression="a[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

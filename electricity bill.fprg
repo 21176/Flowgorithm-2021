@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Senthil"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-13 11:50:54 AM"/>
+        <attribute name="created" value="U2VudGhpbDtERVNLVE9QLThLNUE0RE87MjAyMS0xMS0xMzsxMToxMjo0MCBBTTszMDA3"/>
+        <attribute name="edited" value="U2VudGhpbDtERVNLVE9QLThLNUE0RE87MjAyMS0xMS0xMzsxMTo1MDo1NCBBTTsxOzMxMjI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="name" type="String" array="False" size=""/>
+            <declare name="num" type="Integer" array="False" size=""/>
+            <declare name="units" type="Real" array="False" size=""/>
+            <declare name="amount" type="Real" array="False" size=""/>
+            <declare name="totalamount" type="Real" array="False" size=""/>
+            <declare name="surcharge" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter the name of the customer: &quot;" newline="True"/>
+            <input variable="name"/>
+            <output expression="&quot;Enter the customer id: &quot;" newline="True"/>
+            <input variable="num"/>
+            <output expression="&quot;Enter the units consumed by the customer: &quot;" newline="True"/>
+            <input variable="units"/>
+            <if expression="units&lt;=199">
+                <then>
+                    <assign variable="amount" expression="units*1.20"/>
+                    <output expression="&quot;Amount charges: &quot;&amp;amount" newline="True"/>
+                    <if expression="amount&gt;400">
+                        <then>
+                            <assign variable="totalamount" expression="amount+amount*15/100"/>
+                            <assign variable="surcharge" expression="amount*15/100"/>
+                            <output expression="&quot;surcharge: &quot; &amp;surcharge" newline="True"/>
+                            <output expression="&quot;Total amount is: &quot;&amp;totalamount" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;The total amount with surcharges not included is: &quot;&amp;totalamount" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="units&gt;=200&amp;&amp;400&gt;units">
+                        <then>
+                            <assign variable="amount" expression="units*1.50"/>
+                            <output expression="&quot;Amount charges: &quot;&amp;amount" newline="True"/>
+                            <if expression="amount&gt;400">
+                                <then>
+                                    <assign variable="totalamount" expression="amount+amount*15/100"/>
+                                    <assign variable="surcharge" expression="amount*15/100"/>
+                                    <output expression="&quot;surcharge: &quot; &amp;surcharge" newline="True"/>
+                                    <output expression="&quot;Total amount is: &quot;&amp;totalamount" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;The total amount with surcharges not included is: &quot;&amp;totalamount" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <if expression="units&gt;=400&amp;&amp;units&lt;600">
+                                <then>
+                                    <assign variable="amount" expression="units*1.80"/>
+                                    <output expression="&quot;Amount charges: &quot;&amp;amount" newline="True"/>
+                                    <if expression="amount&gt;400">
+                                        <then>
+                                            <assign variable="totalamount" expression="amount+amount*15/100"/>
+                                            <assign variable="surcharge" expression="amount*15/100"/>
+                                            <output expression="&quot;surcharge: &quot; &amp;surcharge" newline="True"/>
+                                            <output expression="&quot;Total amount is: &quot;&amp;totalamount" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;The total amount with surcharges not included is: &quot;&amp;totalamount" newline="True"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <assign variable="amount" expression="units*2"/>
+                                    <output expression="&quot;Amount charges: &quot;&amp;amount" newline="True"/>
+                                    <if expression="amount&gt;400">
+                                        <then>
+                                            <assign variable="totalamount" expression="amount+amount*15/100"/>
+                                            <assign variable="surcharge" expression="amount*15/100"/>
+                                            <output expression="&quot;surcharge: &quot; &amp;surcharge" newline="True"/>
+                                            <output expression="&quot;Total amount is: &quot;&amp;totalamount" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;The total amount with surcharges not included is: &quot;&amp;totalamount" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

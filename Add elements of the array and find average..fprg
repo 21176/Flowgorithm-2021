@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="navin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-06 11:19:36 AM"/>
+        <attribute name="created" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjItMDEtMDY7MTE6MTE6MzAgQU07MjgxNA=="/>
+        <attribute name="edited" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjItMDEtMDY7MTE6MTI6MTkgQU07MTtuYXZpbjtERVNLVE9QLTM4QzZGQk47MjAyMS0xMi0yOTsxMTo1NDozNyBBTTtyZWFkIG4gZWxlbWVudHMgaW4gYW4gYXJyYXkgYW5kIGZpbmQgdGhlIG9kZCBudW1iZXJzIGluIHRoZW0uZnByZzsxMTg1Ng=="/>
+        <attribute name="edited" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjItMDEtMDY7MTE6MTk6MzYgQU07MTsyOTM2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, sum, N, avg" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter size of the array: &quot;" newline="True"/>
+            <input variable="N"/>
+            <declare name="num" type="Integer" array="True" size="N"/>
+            <output expression="&quot;Enter the elements for the array: &quot;" newline="True"/>
+            <assign variable="sum" expression="0"/>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <input variable="num[i]"/>
+                <assign variable="sum" expression="sum+num[i]"/>
+            </for>
+            <output expression="&quot;The sum of elements in the array is: &quot;&amp;sum" newline="True"/>
+            <assign variable="avg" expression="sum/N"/>
+            <output expression="&quot;The average of elements in the array is: &quot;&amp;avg" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

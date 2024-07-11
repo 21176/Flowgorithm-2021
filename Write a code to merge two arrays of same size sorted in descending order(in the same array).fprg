@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="navin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-17 04:46:18 PM"/>
+        <attribute name="created" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjItMDEtMTM7MTA6NDA6NDYgUE07MjgzNQ=="/>
+        <attribute name="edited" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjItMDEtMTc7MDQ6NDY6MTggUE07MTM7MzAwNg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, j, N, t" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the size of the array: &quot;" newline="True"/>
+            <input variable="N"/>
+            <declare name="a" type="Integer" array="True" size="2*N"/>
+            <output expression="&quot;Enter the elements into the first array: &quot;" newline="True"/>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <input variable="a[i]"/>
+            </for>
+            <declare name="b" type="Integer" array="True" size="N"/>
+            <output expression="&quot;Enter the elements into second array: &quot;" newline="True"/>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <input variable="b[i]"/>
+            </for>
+            <output expression="&quot;The array after merging: &quot;" newline="True"/>
+            <for variable="i" start="N" end="N+N-1" direction="inc" step="1">
+                <assign variable="a[i]" expression="b[i-N]"/>
+            </for>
+            <for variable="i" start="0" end="N+N-1" direction="inc" step="1">
+                <output expression="a[i]" newline="True"/>
+            </for>
+            <output expression="&quot;The array after sorting: &quot;" newline="True"/>
+            <for variable="i" start="0" end="N+N-1" direction="inc" step="1">
+                <for variable="j" start="i+1" end="N+N-1" direction="inc" step="1">
+                    <if expression="a[i]&lt;a[j]">
+                        <then>
+                            <assign variable="t" expression="a[i]"/>
+                            <assign variable="a[i]" expression="a[j]"/>
+                            <assign variable="a[j]" expression="t"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <output expression="a[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

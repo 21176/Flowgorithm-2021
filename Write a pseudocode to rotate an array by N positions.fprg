@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="navin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-20 11:24:55 PM"/>
+        <attribute name="created" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjItMDEtMjA7MDc6MDA6MDUgUE07MjgzMA=="/>
+        <attribute name="edited" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjItMDEtMjA7MTE6MjQ6NTUgUE07MTM7Mjk5NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, N, pos, j" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the size of the array: &quot;" newline="True"/>
+            <input variable="N"/>
+            <declare name="a" type="Integer" array="True" size="N"/>
+            <output expression="&quot;Enter the elements into the array: &quot;" newline="True"/>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <input variable="a[i]"/>
+            </for>
+            <output expression="&quot;Enter the position: &quot;" newline="True"/>
+            <input variable="pos"/>
+            <declare name="c" type="Integer" array="True" size="N"/>
+            <output expression="&quot;From &quot; &amp;pos&amp; &quot; th position the values of the array are: &quot;" newline="True"/>
+            <for variable="i" start="0" end="N-pos-1" direction="inc" step="1">
+                <assign variable="c[i]" expression="a[i+pos]"/>
+                <output expression="c[i]" newline="True"/>
+            </for>
+            <output expression="&quot;Before &quot; &amp;pos&amp; &quot; position the values of the array are&quot;" newline="True"/>
+            <for variable="i" start="0" end="pos-1" direction="inc" step="1">
+                <output expression="a[i]" newline="True"/>
+            </for>
+            <output expression="&quot;After rotating from &quot; &amp;pos&amp; &quot; th position the array is: &quot;" newline="True"/>
+            <for variable="i" start="0" end="pos-1" direction="inc" step="1">
+                <assign variable="c[N-pos+i]" expression="a[i]"/>
+            </for>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <output expression="c[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="navin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-07 10:23:29 AM"/>
+        <attribute name="created" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjItMDEtMDc7MTA6MTQ6MDcgQU07MjgyMQ=="/>
+        <attribute name="edited" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjItMDEtMDc7MTA6MjM6MjkgQU07MTsyOTMz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, evensum, avg, N, count" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the size of he array: &quot;" newline="True"/>
+            <input variable="N"/>
+            <declare name="num" type="Integer" array="True" size="N"/>
+            <output expression="&quot;Enter the elements of the array: &quot;" newline="True"/>
+            <assign variable="evensum" expression="0"/>
+            <assign variable="count" expression="0"/>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <input variable="num[i]"/>
+                <if expression="num[i]%2==0">
+                    <then>
+                        <assign variable="count" expression="count+1"/>
+                        <assign variable="evensum" expression="evensum+num[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <assign variable="avg" expression="0"/>
+            <assign variable="avg" expression="evensum/count"/>
+            <output expression="&quot;The sum of even elements in the array are: &quot;&amp;evensum" newline="True"/>
+            <output expression="&quot;The average of even elements in the array are: &quot;&amp;avg" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

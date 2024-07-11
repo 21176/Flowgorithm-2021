@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="navin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-07 09:49:18 AM"/>
+        <attribute name="created" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjItMDEtMDc7MDk6MDI6MzMgQU07MjgyNQ=="/>
+        <attribute name="edited" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjItMDEtMDc7MDk6MTM6MjMgQU07MTtuYXZpbjtERVNLVE9QLTM4QzZGQk47MjAyMi0wMS0wNzswODo0ODo0NSBBTTtDb3VudCB0aGUgbnVtYmVyIG9mIGVsZW1lbnRzIGluIHRoZSBhcnJheSB3aGljaCBhcmUgZGl2aXNpYmxlIGJ5IDQuLmZwcmc7MTI1MDk="/>
+        <attribute name="edited" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjItMDEtMDc7MDk6NDk6MTggQU07MjsyOTQ4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, count, N" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter a number: &quot;" newline="True"/>
+            <input variable="N"/>
+            <declare name="num" type="Integer" array="True" size="N"/>
+            <output expression="&quot;Enter the elements of the array: &quot;" newline="True"/>
+            <assign variable="count" expression="0"/>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <input variable="num[i]"/>
+                <assign variable="count" expression="count+1"/>
+            </for>
+            <output expression="&quot;The length of the array: &quot;&amp;count" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

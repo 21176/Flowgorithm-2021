@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="navin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-24 07:14:24 PM"/>
+        <attribute name="created" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjEtMTEtMjQ7MDE6MDI6MjIgUE07MjgyOQ=="/>
+        <attribute name="edited" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjEtMTEtMjQ7MDc6MTQ6MjQgUE07MzsyOTUw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num1, num2, sum, i" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter the numbers: &quot;" newline="True"/>
+            <input variable="num1"/>
+            <input variable="num2"/>
+            <assign variable="sum" expression="0"/>
+            <for variable="i" start="num1" end="num2" direction="inc" step="1">
+                <if expression="i%3==0||i%5==0">
+                    <then>
+                        <assign variable="sum" expression="sum+i"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;the sum is: &quot;&amp;sum" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

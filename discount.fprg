@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Senthil"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-29 09:16:12 AM"/>
+        <attribute name="created" value="U2VudGhpbDtERVNLVE9QLThLNUE0RE87MjAyMS0xMC0yOTswOTowOToxNCBBTTszMDI3"/>
+        <attribute name="edited" value="U2VudGhpbDtERVNLVE9QLThLNUE0RE87MjAyMS0xMC0yOTswOToxNjoxMiBBTTsxOzMxMzE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="price" type="Real" array="False" size=""/>
+            <declare name="discount" type="Real" array="False" size=""/>
+            <declare name="finalprice" type="Real" array="False" size=""/>
+            <output expression="&quot;enter the amount&quot;" newline="True"/>
+            <input variable="price"/>
+            <output expression="&quot;enter discount&quot;" newline="True"/>
+            <input variable="discount"/>
+            <assign variable="finalprice" expression="price-discount"/>
+            <output expression="&quot;the final price is&quot; &amp;finalprice" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

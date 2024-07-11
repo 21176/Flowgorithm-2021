@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="navin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-21 10:26:25 AM"/>
+        <attribute name="created" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjItMDEtMjE7MTA6MjI6MzQgQU07MjgxNg=="/>
+        <attribute name="edited" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjItMDEtMjE7MTA6MjY6MjUgQU07MTsyOTI4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="m, n" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the number: &quot;" newline="True"/>
+            <input variable="m"/>
+            <output expression="&quot;Enter the power: &quot;" newline="True"/>
+            <input variable="n"/>
+            <call expression="power(m,n)"/>
+        </body>
+    </function>
+    <function name="power" type="None" variable="">
+        <parameters>
+            <parameter name="m" type="Integer" array="False"/>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="power" type="Integer" array="False" size=""/>
+            <assign variable="power" expression="m^n"/>
+            <output expression="&quot;The power of m,n is: &quot;&amp;power" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

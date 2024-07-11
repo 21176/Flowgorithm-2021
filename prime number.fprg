@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="navin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-24 12:39:53 PM"/>
+        <attribute name="created" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjEtMTEtMjQ7MTI6Mjg6NTAgUE07Mjg0MA=="/>
+        <attribute name="edited" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjEtMTEtMjQ7MTI6Mzk6NTMgUE07MTsyOTUz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, i, count" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter a number: &quot;" newline="True"/>
+            <input variable="num"/>
+            <assign variable="count" expression="0"/>
+            <for variable="i" start="1" end="num" direction="inc" step="1">
+                <if expression="num%i==0">
+                    <then>
+                        <assign variable="count" expression="count+1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="count==2">
+                <then>
+                    <output expression="&quot;the given number is prime&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;the given number is not prime&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

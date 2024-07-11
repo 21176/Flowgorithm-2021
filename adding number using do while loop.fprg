@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="navin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-12-24 09:30:27 AM"/>
+        <attribute name="created" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjEtMTItMjQ7MDg6NDQ6MTEgQU07MjgyNg=="/>
+        <attribute name="edited" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjEtMTItMjQ7MDk6MzA6MjcgQU07NTsyOTQx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, sum" type="Integer" array="False" size=""/>
+            <assign variable="sum" expression="0"/>
+            <output expression="&quot;enter a number: &quot;" newline="True"/>
+            <input variable="num"/>
+            <do expression="num!=5">
+                <assign variable="sum" expression="sum+num"/>
+                <output expression="&quot;the sum of the numbers is: &quot;&amp;sum" newline="True"/>
+                <output expression="&quot;enter a number: &quot;" newline="True"/>
+                <input variable="num"/>
+            </do>
+            <output expression="&quot;end of sumation: &quot;&amp;sum" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

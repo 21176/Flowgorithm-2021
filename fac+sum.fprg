@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="navin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-12-23 12:03:28 PM"/>
+        <attribute name="created" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjEtMTItMjI7MTE6MDA6MDcgQU07MjgxNQ=="/>
+        <attribute name="edited" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjEtMTItMjM7MTI6MDM6MjggUE07MzsyOTQ4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, i, j, fac, sum" type="Real" array="False" size=""/>
+            <output expression="&quot;enter a number: &quot;" newline="True"/>
+            <input variable="num"/>
+            <assign variable="sum" expression="0"/>
+            <for variable="i" start="1" end="num" direction="inc" step="1">
+                <assign variable="fac" expression="1"/>
+                <for variable="j" start="1" end="i" direction="inc" step="1">
+                    <assign variable="fac" expression="fac*j"/>
+                </for>
+                <output expression="&quot;the factorial of the number is: &quot; &amp;fac" newline="True"/>
+                <assign variable="sum" expression="sum+i/fac"/>
+            </for>
+            <output expression="&quot;final sum is: &quot;&amp;sum" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

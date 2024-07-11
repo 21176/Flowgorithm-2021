@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="navin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-12-24 07:09:29 PM"/>
+        <attribute name="created" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjEtMTItMjQ7MDI6MDM6NDUgUE07MjgzNw=="/>
+        <attribute name="edited" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjEtMTItMjQ7MDc6MDk6MjkgUE07MjsyOTU5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, rev, a, c" type="Integer" array="False" size=""/>
+            <assign variable="n" expression="10000"/>
+            <output expression="&quot;the palindrom of 5 digit numbers are: &quot;" newline="True"/>
+            <do expression="n&lt;99999">
+                <assign variable="a" expression="0"/>
+                <assign variable="rev" expression="0"/>
+                <assign variable="c" expression="n"/>
+                <while expression="c&gt;0">
+                    <assign variable="a" expression="c%10"/>
+                    <assign variable="c" expression="c/10"/>
+                    <assign variable="rev" expression="rev*10+a"/>
+                </while>
+                <if expression="n==rev">
+                    <then>
+                        <output expression="n" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="n" expression="n+1"/>
+            </do>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="navin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-07 09:40:58 AM"/>
+        <attribute name="created" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjItMDEtMDc7MDk6MTk6MzkgQU07MjgzOQ=="/>
+        <attribute name="edited" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjItMDEtMDc7MDk6MzM6MzYgQU07MTtuYXZpbjtERVNLVE9QLTM4QzZGQk47MjAyMi0wMS0wNzswODo1Mjo0NiBBTTtEaXNwbGF5IHRoZSBlbGVtZW50cyBvZiBhbiBhcnJheSB3aGljaCBhcmUgYXQgaW5kaWNlcyBkaXZpc2libGUgYnkgMy4uZnByZzsxMjY4NQ=="/>
+        <attribute name="edited" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjItMDEtMDc7MDk6NDA6MzIgQU07MjtERUxMO1BSQUJIQVYtTEFQVE9QOzIwMjItMDEtMDc7MDg6NTM6MjQgQU07UmVwbGFjZUVsZW1lbnR3aXRoYW5vdGhlcmFycmF5LmZwcmc7OTI2Mw=="/>
+        <attribute name="edited" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjItMDEtMDc7MDk6NDA6NTggQU07MTsyOTQy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, N, ele, replace, count" type="Integer" array="False" size=""/>
+            <assign variable="count" expression="0"/>
+            <output expression="&quot;Enter the size of the array: &quot;" newline="True"/>
+            <input variable="N"/>
+            <declare name="num" type="Integer" array="True" size="N"/>
+            <output expression="&quot;Enter the elements of the array: &quot;" newline="True"/>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <input variable="num[i]"/>
+            </for>
+            <output expression="&quot;Enter the element you want to replace: &quot;" newline="True"/>
+            <input variable="ele"/>
+            <output expression="&quot;Enter the element with which it has to be replaced: &quot;" newline="True"/>
+            <input variable="replace"/>
+            <output expression="&quot;The updated array elements are: &quot;" newline="True"/>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <if expression="num[i]==ele">
+                    <then>
+                        <assign variable="num[i]" expression="replace"/>
+                        <assign variable="count" expression="1"/>
+                    </then>
+                    <else/>
+                </if>
+                <output expression="num[i]" newline="True"/>
+            </for>
+            <if expression="count = 0">
+                <then>
+                    <output expression="&quot;Element , which wants to be replaced , is not there in the array&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

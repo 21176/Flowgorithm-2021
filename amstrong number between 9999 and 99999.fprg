@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="navin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-12-25 08:57:51 AM"/>
+        <attribute name="created" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjEtMTItMjQ7MTA6Mzg6MDMgQU07MjgyMw=="/>
+        <attribute name="edited" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjEtMTItMjQ7MTA6Mzg6MDYgQU07MTtuYXZpbjtERVNLVE9QLTM4QzZGQk47MjAyMS0xMi0yMTswODoyNTo0NSBQTTt0ZXN0LmZwcmc7NjgyMQ=="/>
+        <attribute name="edited" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjEtMTItMjU7MDg6NTc6NTEgQU07NTsyOTQ3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, a, sum, num1, b, c" type="Integer" array="False" size=""/>
+            <assign variable="a" expression="9999"/>
+            <do expression="a&lt;99999">
+                <assign variable="num" expression="0"/>
+                <assign variable="b" expression="a"/>
+                <assign variable="c" expression="a"/>
+                <while expression="c!=0">
+                    <assign variable="c" expression="c/10"/>
+                    <assign variable="num" expression="num+1"/>
+                </while>
+                <assign variable="num1" expression="0"/>
+                <assign variable="sum" expression="0"/>
+                <while expression="b!=0">
+                    <assign variable="num1" expression="b%10"/>
+                    <assign variable="b" expression="b/10"/>
+                    <assign variable="sum" expression="sum+(num1 ^ num)"/>
+                </while>
+                <if expression="sum==a">
+                    <then>
+                        <output expression="&quot;it is an amstrong number!!&quot;&amp;a" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="a" expression="a+1"/>
+            </do>
+        </body>
+    </function>
+</flowgorithm>

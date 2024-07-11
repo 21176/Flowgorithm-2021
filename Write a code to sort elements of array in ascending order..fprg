@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="navin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-17 12:34:18 PM"/>
+        <attribute name="created" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjItMDEtMTM7MDI6MjA6MjMgUE07MjgyOQ=="/>
+        <attribute name="edited" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjItMDEtMTM7MDI6MjA6MjYgUE07MTtuYXZpbjtERVNLVE9QLTM4QzZGQk47MjAyMi0wMS0xMzswMjoxNDoyNiBQTTtXcml0ZSBhIGNvZGUgdG8gZmluZCB0aGUgbWF4aW11bSBhbmQgbWluaW11bSBlbGVtZW50IGluIGFuIGFycmF5LmZwcmc7MTIyOTg="/>
+        <attribute name="edited" value="bmF2aW47REVTS1RPUC0zOEM2RkJOOzIwMjItMDEtMTc7MTI6MzQ6MTggUE07MjsyOTUy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, N, t, j" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the size of the array: &quot;" newline="True"/>
+            <input variable="N"/>
+            <declare name="num" type="Integer" array="True" size="N"/>
+            <output expression="&quot;Enter the elements of the array: &quot;" newline="True"/>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <input variable="num[i]"/>
+            </for>
+            <output expression="&quot;The elements after sorting is: &quot;" newline="True"/>
+            <for variable="i" start="0" end="N-1" direction="inc" step="1">
+                <for variable="j" start="i+1" end="N-1" direction="inc" step="1">
+                    <if expression="num[i]&gt;num[j]">
+                        <then>
+                            <assign variable="t" expression="num[i]"/>
+                            <assign variable="num[i]" expression="num[j]"/>
+                            <assign variable="num[j]" expression="t"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <output expression="num[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
